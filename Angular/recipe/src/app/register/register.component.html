@@ -1,0 +1,47 @@
+
+<h1 align="center">Employee Registration</h1>
+
+<table align="center">
+    <tr>
+        <td> UserName </td>
+        <td> <input type="text" name="userName" [(ngModel)]="user.userName" /> </td>
+    </tr>
+    
+    <tr>
+        <td> Gender </td>
+        <td>
+            <select name="salary" [(ngModel)]="user.gender">
+                <option value="" selected>Select Gender</option>
+                <option value="Male">   Male </option>
+                <option value="Female"> Female </option>
+                <option value="Others"> Others </option>
+            </select>
+        </td>
+    </tr>
+  
+    <tr>
+        <td> Country </td>
+        <td>
+            <select name="country" [(ngModel)]="user.country">
+                <option value="" selected>Select Country</option>
+                <option value="{{country.cca3}}" *ngFor="let country of countries"> {{country.name.common}} </option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td> Email-Id </td>
+        <td> <input type="text" name="emailId" [(ngModel)]="user.emailId" /> </td>
+    </tr>
+    <tr>
+        <td> Password </td>
+        <td> <input type="password" name="password" [(ngModel)]="user.password" /> </td>
+    </tr>
+
+
+    <tr>
+        <td></td>
+        <td> <button (click)="submit()"> Register </button></td>
+            Already User? <a routerLink="//login">SignIn</a>
+        
+    </tr>
+</table>
