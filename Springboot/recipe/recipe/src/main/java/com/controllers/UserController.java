@@ -1,5 +1,69 @@
 package com.controllers;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.dao.UserDao;
+import com.model.User;
+
+@RestController
+@CrossOrigin(origins="http://localhost:4200")
 public class UserController {
 
+	@Autowired
+	UserDao userDao;
+
+	@PostMapping("userLogin")
+	public User userLogin(@RequestBody User credentials) {
+		String emailId = credentials.getEmailId();
+		String password = credentials.getPassword();
+		return userDao.userLogin(emailId, password);
+	}
+
+	@GetMapping("getAllUsers")
+	public List<User> getAllUsers() {
+		return userDao.getAllUsers();
+	}
+
+	@GetMapping("getUserById/{id}")
+	public User getUserById(@PathVariable("id") int userId) {
+		return userDao.getUserById(userId);
+	}
+
+	@GetMapping("getUserByName/{name}")
+	public List<User> getUserByName(@PathVariable("name") String userName) {
+		return userDao.getUserByName(userName);
+	}
+
+	@PostMapping("addUser")
+	public ResponseEntity<?> addUser(@RequestBody User user) {
+		try {
+			return ResponseEntity.ok(userDao.addUser(user));
+		} catch (DataIntegrityViolationException e) {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Email ID already exists");
+		}
+	}
+
+	@PutMapping("updateUser")
+	public User updateUser(@RequestBody User user) {
+		return userDao.updateUser(user);
+	}
+
+	@DeleteMapping("deleteUserById/{id}")
+	public String deleteUserById(@PathVariable("id") int userId) {
+		userDao.deleteUserById(userId);
+		return "User Record Deleted Successfully!!!";
+	}
 }
