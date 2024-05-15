@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* h1 {
+    color: #fff2f2;
+    background: black;
+  } */
+  
+  .recipes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .recipe {
+    width: 200%;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .recipe:hover {
+    transform: scale(1.05);
+  }
+  
+  h3 {
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  .row1 {
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    margin: 10px;
+  
+  }
+  .row2{
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    margin: 10px;
+  }
+  .row3{
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    margin: 10px;
+  
+  }
