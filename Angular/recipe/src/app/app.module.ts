@@ -1,32 +1,29 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { RegisterComponent } from './register/register.component';
+import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgToastModule } from 'ng-angular-popup';
-import { RouterModule } from '@angular/router';
+import { RegisterComponent } from './register/register.component';
+import { authGuard } from './auth.guard';
+import { LogoutComponent } from './logout/logout.component';
+import { IngrediantsComponent } from './ingrediants/ingrediants.component';
+// import { HomeComponent } from './home/home.component';
+// import { AboutComponent } from './about/about.component';
+
+const routes: Routes = [
+  {path:'',            component:LoginComponent},
+  {path:'login',       component:LoginComponent},
+  {path:'register',    component:RegisterComponent},
+  // {path:'home',        component:HomeComponent},
+  // {path:'about',       component:AboutComponent},
+  {path:'ingrediants', component:IngrediantsComponent},
+  {path:'logout',      canActivate:[authGuard], component:LogoutComponent}
+];
 
 @NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    RegisterComponent,
-    LoginComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    NgToastModule,
-    ReactiveFormsModule,
-    RouterModule,
-
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    LogoutComponent,
+    IngrediantsComponent
+  ]
 })
-export class AppModule { }
+export class AppRoutingModule { }
