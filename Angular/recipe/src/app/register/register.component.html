@@ -1,12 +1,10 @@
-
-<h1 align="center">Employee Registration</h1>
+<h1 align="center">User Registration</h1>
 
 <table align="center">
     <tr>
         <td> UserName </td>
         <td> <input type="text" name="userName" [(ngModel)]="user.userName" /> </td>
     </tr>
-    
     <tr>
         <td> Gender </td>
         <td>
@@ -18,7 +16,6 @@
             </select>
         </td>
     </tr>
-  
     <tr>
         <td> Country </td>
         <td>
@@ -29,6 +26,10 @@
         </td>
     </tr>
     <tr>
+        <td> MobileNumber </td>
+        <td> <input type="text" name="mobileNum" [(ngModel)]="user.mobileNum" /> </td>
+    </tr>
+    <tr>
         <td> Email-Id </td>
         <td> <input type="text" name="emailId" [(ngModel)]="user.emailId" /> </td>
     </tr>
@@ -36,12 +37,11 @@
         <td> Password </td>
         <td> <input type="password" name="password" [(ngModel)]="user.password" /> </td>
     </tr>
-
-
     <tr>
         <td></td>
-        <td> <button (click)="submit()"> Register </button></td>
-            Already User? <a routerLink="//login">SignIn</a>
+        <td> <button (click)="submit()"> Register </button>
         
+            Already User? <a routerLink="//login">SignIn</a>
+        </td>
     </tr>
 </table>
