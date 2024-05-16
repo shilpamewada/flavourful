@@ -10,13 +10,15 @@ import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { RouterModule } from '@angular/router';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 import { LogoutComponent } from './logout/logout.component';
 import { NgToastModule } from 'ng-angular-popup';
 import { IngrediantsComponent } from './ingrediants/ingrediants.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import {FormGroup, FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { NgxCaptchaModule } from 'ngx-captcha';
+// import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
 
@@ -31,16 +33,17 @@ import { NgxCaptchaModule } from 'ngx-captcha';
     IngrediantsComponent,
     HomeComponent,
     AboutComponent
+    // ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    RouterModule,
-    ReactiveFormsModule,
+     RouterModule,
     NgToastModule,
-    NgxCaptchaModule
+    NgxCaptchaModule,
+    ReactiveFormsModule
     
   ],
   providers: [],
