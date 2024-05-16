@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmpService } from '../emp.service';
+import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LogoutComponent {
 
-  constructor(private service: EmpService, private router: Router) {
+  constructor(private service: UserService, private router: Router) {
     alert("Successfully Logged Out!!!");
 
     //Clears the LocalStorage Data
