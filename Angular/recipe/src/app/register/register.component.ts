@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
+
 
 @Component({
   selector: 'app-register',
@@ -12,9 +14,11 @@ export class RegisterComponent implements OnInit {
   user: any;
   countries: any;
   confirmPassword: any;
+  
+ 
 
 
-  constructor(private service: UserService,private router:Router) {
+  constructor(private toast: NgToastService,private service: UserService,private router:Router) {
 
     this.user = {
       userName: '',
@@ -44,6 +48,7 @@ export class RegisterComponent implements OnInit {
       console.log(data);
     });
     console.log("Registration successful");
+    this.toast.success({ detail: "Success Message", summary: "Registration Success", duration: 5000 })
     this.router.navigate(['home']);
     
   }
