@@ -56,7 +56,7 @@ export class LoginComponent  implements OnInit{
 
   emailId: string;
   password: string;
-  mobile: any;
+  // mobile: any;
   captchaResponse: string;
  
 
@@ -64,7 +64,7 @@ export class LoginComponent  implements OnInit{
     this.siteKey = "6LeQPd4pAAAAAOwJFqx3fsIBYiyFSfdQlo79XZop";
     this.emailId = "";
     this.password = "";
-    this.mobile = "";
+    // this.mobile = "";
     this.captchaResponse = "";
   }
   

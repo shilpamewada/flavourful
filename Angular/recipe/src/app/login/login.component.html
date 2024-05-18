@@ -26,13 +26,13 @@
               <div *ngIf="password.errors?.['minlength'] && password.touched" style="color:red;">Please Enter atleast 2 Characters for Password</div>
           </div> <br/>
     
-          <div class="input-group">
+          <!-- <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
               <input type="text" class="form-control" name="mobile" #mobile="ngModel" ngModel required
               pattern="^[6-9]\d{9}$|^(\d{10})$" />
               <div *ngIf="mobile.errors?.['required'] && mobile.touched" style="color:red;">Please Enter MobileNumber</div>
               <div *ngIf="(mobile.errors?.['pattern'] || mobile.errors?.['minlength=10']) && mobile.touched" style="color:red;">Please Enter a valid 10-digit Mobile Number starting with 6, 7, 8, or 9</div>
-          </div> <br/>
+          </div> <br/> -->
     
         
          <form [formGroup]="aFormGroup"> <ngx-recaptcha2 #captchaElem
