@@ -17,7 +17,7 @@ const routes: Routes = [
   {path:'about',       component:AboutComponent},
   {path:'ingrediants', component:IngrediantsComponent},
   {path:'logout',      canActivate:[authGuard], component:LogoutComponent},
-  {path:'chickencurry',component:ChickenCurryComponent}
+ {path:'chickencurry',component:ChickenCurryComponent}
 ];
 
 @NgModule({
