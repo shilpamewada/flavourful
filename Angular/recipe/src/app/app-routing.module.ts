@@ -7,6 +7,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { IngrediantsComponent } from './ingrediants/ingrediants.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { ChickenCurryComponent } from './chicken-curry/chicken-curry.component';
 
 const routes: Routes = [
   {path:'',            component:LoginComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'home',        component:HomeComponent},
   {path:'about',       component:AboutComponent},
   {path:'ingrediants', component:IngrediantsComponent},
-  {path:'logout',      canActivate:[authGuard], component:LogoutComponent}
+  {path:'logout',      canActivate:[authGuard], component:LogoutComponent},
+  {path:'chickencurry',component:ChickenCurryComponent}
 ];
 
 @NgModule({
