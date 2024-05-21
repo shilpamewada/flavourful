@@ -19,6 +19,7 @@ import { AboutComponent } from './about/about.component';
 import {FormGroup, FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { ChickenCurryComponent } from './chicken-curry/chicken-curry.component';
+import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 // import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
@@ -34,7 +35,8 @@ import { ChickenCurryComponent } from './chicken-curry/chicken-curry.component';
     IngrediantsComponent,
     HomeComponent,
     AboutComponent,
-    ChickenCurryComponent
+    ChickenCurryComponent,
+    AddRecipeComponent
     // ForgotPasswordComponent
   ],
   imports: [

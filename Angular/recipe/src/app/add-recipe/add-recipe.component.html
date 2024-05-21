@@ -1,0 +1,15 @@
+<div style="background-image: url('https://img.freepik.com/free-photo/ingredients-cabbage-carrot-pie-cabbage-carrots-eggs-flour-milk-butter-spices-white-background_127032-2819.jpg'); background-size: cover; min-height: 100vh;">
+    <div>
+      <label for="recipeName">Recipe Name:</label>
+      <input type="text" id="recipeName" [(ngModel)]="recipeName" /><br>
+    
+      <label for="ingredients">Ingredients:</label>
+      <div *ngFor="let ingredient of ingredients; let i = index">
+        <span>{{ ingredient }}</span>
+        <button (click)="removeIngredient(i)">Remove</button>
+      </div><br>
+      <input type="text" id="currentIngredient" [(ngModel)]="currentIngredient" />
+      <button (click)="addIngredient()">Add Ingredient</button><br>
+    
+      <label for="process">Process:</label>
+      <textarea id="process" [(ngModel)]="process"></textarea><br>
