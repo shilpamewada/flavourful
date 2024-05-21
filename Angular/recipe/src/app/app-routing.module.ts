@@ -8,6 +8,7 @@ import { IngrediantsComponent } from './ingrediants/ingrediants.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ChickenCurryComponent } from './chicken-curry/chicken-curry.component';
+import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 
 const routes: Routes = [
   {path:'',            component:LoginComponent},
@@ -17,8 +18,9 @@ const routes: Routes = [
   {path:'about',       component:AboutComponent},
   {path:'ingrediants', component:IngrediantsComponent},
   {path:'logout',      canActivate:[authGuard], component:LogoutComponent},
-{path:'chickencurry',component:ChickenCurryComponent}
-];
+{path:'chickencurry',component:ChickenCurryComponent},
+{path:'addrecipe',component:AddRecipeComponent}
+];                                                                                                    
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
