@@ -43,7 +43,7 @@ ul li, ol li {
 }
 
 /* Styling for Ingredients and Instructions */
-h2 {
+ h2 {
     color: #e44d26;
     border-bottom: 2px solid #e44d26;
     padding-bottom: 5px;
@@ -52,7 +52,7 @@ h2 {
 
  ul, ol {
     margin-top: 10px;
-}
+} 
 
 /* Styling for Footer */
 footer {
@@ -67,3 +67,39 @@ footer {
         border-radius: 0;
     }
 }
+/* src/app/recipe/recipe.component.css */
+.recipe-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .recipe-container img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .recipe-details h2 {
+    margin-top: 20px;
+  }
+  .recipe-details ul, .recipe-details ol {
+    margin-left: 20px;
+  }
+  .purchase-button {
+    display: block;
+    width: 25%;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #aacee2;
+    color: hsl(0, 0%, 2%);
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 200px;
+  }
+  .purchase-button:hover {
+    background-color: #218838;
+  }
+  
