@@ -72,7 +72,7 @@ export class LoginComponent  implements OnInit{
   loginSubmit(loginForm: any) {
     console.log(loginForm);
 
-    if (loginForm.emailId == "admin@gmail.com" && loginForm.password == "123") {
+    if (loginForm.emailId == "harsha@gmail.com" && loginForm.password == "Harsha@123" || loginForm.emailId == "vamsi@gmail.com" && loginForm.password == "Vamsi@27" || loginForm.emailId == "admin@gmail.com" && loginForm.password == "Admin@123") {
       console.log('Login Success');
       this.toast.success({ detail: "Success Message", summary: "Login Success", duration: 5000 })
       this.router.navigate(['home']);

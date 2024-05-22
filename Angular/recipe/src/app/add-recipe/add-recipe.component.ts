@@ -113,7 +113,8 @@ export class AddRecipeComponent {
   
       reader.readAsDataURL(file);
     } else {
-      alert("Please select a valid image file.");
+     
+      console.log("Please select a valid image file.")
     }
   }
 
@@ -156,7 +157,6 @@ export class AddRecipeComponent {
 
     // For demonstration purposes, we're just logging and resetting the form
     console.log('Recipe saved:', recipeData);
-    alert("Recipe saved!");
     this.resetForm();
   }
 
