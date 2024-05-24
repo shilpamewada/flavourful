@@ -93,7 +93,7 @@ export class HomeComponent {
     {
       imageUrl: 'https://bfoodale.com/uploads/2021/12/Mutton-Biryani.jpg',
       title: 'Mutton Biryani',
-      description: 'To view the chicken biryani recipe click on view recipe'
+      description: 'To view the Mutton biryani recipe click on view recipe'
     },
     {
     //   imageUrl: 'https://aahaaramonline.com/wp-content/uploads/2016/12/Usirikaya_Annam_Nellikai_Sadam_Usirikaya_Pulihora_Amla_Rice.jpg',
@@ -115,7 +115,7 @@ export class HomeComponent {
     {
       imageUrl: 'https://www.madhuseverydayindian.com/wp-content/uploads/2022/11/easy-vegetable-biryani.jpg',
       title: 'Vegetable Biryani',
-      description: 'To view the vegetable biryani'
+      description: 'To view the vegetable biryani recipe click on view recipe'
     },
     {
       imageUrl: 'https://st4.depositphotos.com/19960896/23021/i/600/depositphotos_230216420-stock-photo-schezwan-noodles-vegetable-hakka-noodles.jpg',
