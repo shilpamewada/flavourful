@@ -68,9 +68,9 @@ const routes: Routes = [
   {path:'',            component:LoginComponent},
   {path:'login',       component:LoginComponent},
   {path:'register',    component:RegisterComponent},
-  {path:'home',        component:HomeComponent},
-  {path:'about',       component:AboutComponent},
-  {path:'addrecipe',   component:AddRecipeComponent},
+  {path:'home',        canActivate:[authGuard],component:HomeComponent},
+  {path:'about',       canActivate:[authGuard],component:AboutComponent},
+  {path:'addrecipe',   canActivate:[authGuard],component:AddRecipeComponent},
   
   {path:'logout',      canActivate:[authGuard], component:LogoutComponent},
 {path:'chickencurry',component:ChickenCurryComponent},

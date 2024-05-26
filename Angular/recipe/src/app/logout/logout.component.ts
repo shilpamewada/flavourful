@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class LogoutComponent {
 
   constructor(private service: UserService, private router: Router) {
-    alert("Successfully Logged Out!!!");
+    console.log("Successfully Logged Out!!!");
 
     //Clears the LocalStorage Data
     localStorage.removeItem('emailId');
