@@ -29,7 +29,6 @@ INDEX VERSION 1.130+C:\Project\SAVOR\Springboot\recipeWorkspace\.metadata\.plugi
 2290501805.index
 2832443601.index
 3219391363.index
-307448873.index
 2226664183.index
 1121266731.index
 2987765134.index

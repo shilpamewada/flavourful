@@ -49,7 +49,7 @@ export class RegisterComponent implements OnInit {
     });
     console.log("Registration successful");
     this.toast.success({ detail: "Success Message", summary: "Registration Success", duration: 5000 })
-    this.router.navigate(['home']);
+    this.router.navigate(['']);
     
   }
 
