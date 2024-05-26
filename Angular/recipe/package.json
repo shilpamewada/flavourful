@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
     "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
     "ng": "^0.0.0",
     "ng-angular-popup": "^0.5.2",
     "ngx-captcha": "^13.0.0",

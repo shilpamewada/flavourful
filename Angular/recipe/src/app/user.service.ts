@@ -134,9 +134,18 @@ export class UserService {
 
   private apiUrl = 'http://localhost:8085/recipes';
 
-  saveRecipe(user: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, user);
+  // saveRecipe(user: any): Observable<any> {
+  //   return this.http.post<any>(this.apiUrl, user);
+  // }
+
+  saveRecipe(recipe: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/addRecipe`, recipe);
   }
+
+  // saveRecipe(recipe: any): Observable<any> {
+  //   return this.http.post(this.apiUrl, recipe);
+  // }
+  
 
   // getAllRecipes(): Observable<any[]> {
   //   return this.http.get<any[]>(this.apiUrl);
