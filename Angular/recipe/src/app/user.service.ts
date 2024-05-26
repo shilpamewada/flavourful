@@ -67,7 +67,7 @@
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -131,4 +131,24 @@ export class UserService {
   getAllCountries() {
     return this.http.get('https://restcountries.com/v3.1/all');
   }
+
+  private apiUrl = 'http://localhost:8085/recipes';
+
+  saveRecipe(user: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl, user);
+  }
+
+  // getAllRecipes(): Observable<any[]> {
+  //   return this.http.get<any[]>(this.apiUrl);
+  // }
+
+  getAllRecipes() {
+    return this.http.get('http://localhost:8085/recipes/getAllRecipes');
+  }
+
+ 
+
+ 
 }
+
+

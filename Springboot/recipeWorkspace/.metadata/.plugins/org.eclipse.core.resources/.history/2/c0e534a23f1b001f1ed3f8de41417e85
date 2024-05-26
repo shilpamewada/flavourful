@@ -1,0 +1,27 @@
+package com.controllers;
+
+import com.model.Recipe;
+import com.service.RecipeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/recipes")
+@CrossOrigin(origins = "http://localhost:4200")
+public class RecipeController {
+
+    @Autowired
+    private RecipeService recipeService;
+
+    @PostMapping
+    public Recipe addRecipe(@RequestBody Recipe recipe) {
+        return recipeService.saveRecipe(recipe);
+    }
+
+    @GetMapping
+    public List<Recipe> getAllRecipes() {
+        return recipeService.getAllRecipes();
+    }
+}
