@@ -1,107 +1,78 @@
-
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    box-sizing: border-box;
 }
 
 .recipe-container {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
     padding: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-h1, h2 {
-    color: #333;
-    text-align: center;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-ul, ol {
-    padding-left: 20px;
-}
-
-ul li, ol li {
-    margin-bottom: 10px;
-}
-
-.recipe-details {
-    line-height: 1.6;
-}
-
-h1{
-    margin-top:50px;
-}
-
- h2 {
-    color: #e44d26;
-    border-bottom: 2px solid #e44d26;
-    padding-bottom: 5px;
-    margin-top: 20px;
-}
-
- ul, ol {
-    margin-top: 10px;
-} 
-
-
-footer {
-    margin-top: 20px;
-    text-align: center;
-    color: #777;
-}
-
-
-@media only screen and (max-width: 600px) {
-    .recipe-container {
-        border-radius: 0;
-    }
-}
-
-.recipe-container {
-    max-width: 600px;
+    max-width: 1200px;
     margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-top:50px;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    align-items: start;
+}
+
+.image-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.image-container img {
+    width: 100%;
+    height: 870px;
+    display: block;
+}
+
+.ingredients {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.instructions {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.ingredients, .instructions {
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  .recipe-container img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  .recipe-details h2 {
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.ingredients {
+    background-color: #ebcaa8;  /* Light peach background for ingredients */
+}
+
+.instructions {
+    background-color: #b0d8eb;  /* Light blue background for instructions */
+}
+
+
+.purchase-button {
     margin-top: 20px;
-  }
-  .recipe-details ul, .recipe-details ol {
-    margin-left: 20px;
-  }
-  .purchase-button {
-    display: block;
-    width: 25%;
-    padding: 10px;
-    margin-top: 10px;
-    text-align: center;
-    background-color: #aacee2;
-    color: hsl(0, 0%, 2%);
-    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-left: 200px;
-  }
-  .purchase-button:hover {
-    background-color: #218838;
-  }
-  
+}
+
+.purchase-button:hover {
+    background-color: #45a049;
+    
+}
