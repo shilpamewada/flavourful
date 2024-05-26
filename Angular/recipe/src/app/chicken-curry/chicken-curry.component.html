@@ -1,15 +1,15 @@
 <div class="recipe-container">
     <h1>Delicious Chicken Curry</h1>
-    <a href="https://player.vimeo.com/video/949042324?h=3a450397fa">
-        <img src="https://www.allrecipes.com/thmb/FL-xnyAllLyHcKdkjUZkotVlHR8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/46822-indian-chicken-curry-ii-DDMFS-4x3-39160aaa95674ee395b9d4609e3b0988.jpg" alt="Chicken Curry">
-    </a>
-    <!-- <iframe title="vimeo-player" src="https://player.vimeo.com/video/949042324?h=3a450397fa" width="640" height="360" frameborder="0"    allowfullscreen>
-        <img src="https://www.allrecipes.com/thmb/FL-xnyAllLyHcKdkjUZkotVlHR8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/46822-indian-chicken-curry-ii-DDMFS-4x3-39160aaa95674ee395b9d4609e3b0988.jpg" alt="Chicken Curry">
-    </iframe> -->
-    <div class="recipe-details">
-        <h2>Ingredients:</h2>
-        <ul>
-            <li>1 kg chicken, cut into pieces</li>
+    <div class="grid-container">
+        <div class="image-container">
+            <a href="https://player.vimeo.com/video/949042324?h=3a450397fa">
+                <img src="https://www.allrecipes.com/thmb/FL-xnyAllLyHcKdkjUZkotVlHR8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/46822-indian-chicken-curry-ii-DDMFS-4x3-39160aaa95674ee395b9d4609e3b0988.jpg" alt="Chicken Curry">
+            </a>
+        </div>
+        <div class="ingredients">
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>1 kg chicken, cut into pieces</li>
             <li>2 large onions, finely chopped</li>
             <li>3 tomatoes, pureed</li>
             <li>1/4 cup cooking oil</li>
@@ -20,22 +20,23 @@
             <li>1 teaspoon garam masala</li>
             <li>Salt to taste</li>
             <li>Fresh coriander leaves for garnish</li>
-        </ul>
-
-        <h2>Instructions:</h2>
-        <ol>
-            <li>Heat oil in a pan, add chopped onions, and sauté until golden brown.</li>
-            <li>Add ginger-garlic paste and sauté for a minute.</li>
-            <li>Stir in chicken pieces and cook until they are no longer pink.</li>
-            <li>Add turmeric powder, red chili powder, and salt. Mix well.</li>
-            <li>Pour in the tomato puree and cook until oil separates from the masala.</li>
-            <li>Whisk yogurt and add it to the chicken. Cook until the chicken is tender.</li>
-            <li>Sprinkle garam masala and garnish with fresh coriander leaves.</li>
-            <li>Serve hot with rice or naan.</li>
-            <h4>To check the video of the recipe, just click on image</h4>
-
-        </ol>
-
-        <button (click)="purchaseIngredients()" class="purchase-button">Purchase</button>
+            </ul>
+        </div>
+        <div class="instructions">
+            <h2>Instructions:</h2>
+            <ol>
+                <li>Heat oil in a pan, add chopped onions, and sauté until golden brown.</li>
+                <li>Add ginger-garlic paste and sauté for a minute.</li>
+                <li>Stir in chicken pieces and cook until they are no longer pink.</li>
+                <li>Add turmeric powder, red chili powder, and salt. Mix well.</li>
+                <li>Pour in the tomato puree and cook until oil separates from the masala.</li>
+                <li>Whisk yogurt and add it to the chicken. Cook until the chicken is tender.</li>
+                <li>Sprinkle garam masala and garnish with fresh coriander leaves.</li>
+                <li>Serve hot with rice or naan.</li>
+                
+            </ol>
+            <h4>To watch the recipe video, click on the image.</h4>
+            <button (click)="purchaseIngredients()" class="purchase-button">Purchase</button>
+        </div>
     </div>
 </div>
