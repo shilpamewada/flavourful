@@ -62,6 +62,7 @@ import { ChickenFriedRiceComponent } from './chicken-fried-rice/chicken-fried-ri
 import { VegBiryaniComponent } from './veg-biryani/veg-biryani.component';
 import { VegNoodlesComponent } from './veg-noodles/veg-noodles.component';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   {path:'',            component:LoginComponent},
@@ -79,7 +80,7 @@ const routes: Routes = [
 {path:'pulihora',component:PulihoraComponent},
  {path:'chickenfriedrice',component:ChickenFriedRiceComponent},
  {path:'vegetablebiryani',component:VegBiryaniComponent},
- {path:'vegnoodles',component:VegNoodlesComponent}
+ {path:'vegnoodles',component:VegNoodlesComponent},
 ];
 
 @NgModule({

@@ -87,6 +87,7 @@ import { PulihoraComponent } from './pulihora/pulihora.component';
 import { ChickenFriedRiceComponent } from './chicken-fried-rice/chicken-fried-rice.component';
 import { VegBiryaniComponent } from './veg-biryani/veg-biryani.component';
 import { VegNoodlesComponent } from './veg-noodles/veg-noodles.component';
+import { FooterComponent } from './footer/footer.component';
 // import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
@@ -110,7 +111,8 @@ import { VegNoodlesComponent } from './veg-noodles/veg-noodles.component';
     PulihoraComponent,
     ChickenFriedRiceComponent,
     VegBiryaniComponent,
-    VegNoodlesComponent
+    VegNoodlesComponent,
+    FooterComponent
     // ForgotPasswordComponent
   ],
   imports: [
