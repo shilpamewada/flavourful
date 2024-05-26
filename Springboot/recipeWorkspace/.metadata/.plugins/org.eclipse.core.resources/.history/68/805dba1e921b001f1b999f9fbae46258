@@ -1,7 +1,6 @@
 package com.controllers;
 
 import com.model.Recipe;
-import com.model.User;
 import com.service.RecipeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +24,7 @@ public class RecipeController {
 //	        return ResponseEntity.ok(imageUrl);
 //	    }
 
-    @PostMapping("addRecipe")
+    @PostMapping
     public Recipe addRecipe(@RequestBody Recipe recipe) {
         return recipeService.saveRecipe(recipe);
     }
@@ -34,18 +33,4 @@ public class RecipeController {
     public List<Recipe> getAllRecipes() {
         return recipeService.getAllRecipes();
     }
-    
-//    @PutMapping("updateRecipe")
-//	public Recipe updateRecipe(@RequestBody Recipe recipe) {
-//		return recipeService.saveRecipe(recipe);
-//	}
-//	
-//	@DeleteMapping("deleteRecipe/{id}")
-//	public String deleteRecipeById(@PathVariable("id") int recipeId) {
-//		recipeService.deleteRecipeById(recipeId);
-//		return "User Record Deleted Successfully!!!";
-//	}
-//    
-   
-	
 }
