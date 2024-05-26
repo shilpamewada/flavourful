@@ -1,4 +1,4 @@
-/* 
+
 
 
 div {
@@ -51,58 +51,5 @@ div {
     background-color: #c9302c;
   }
  
-   *//* add-recipe.component.css */
-
-.container {
-  max-width: 400px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-image: url('https://img.freepik.com/free-photo/ingredients-cabbage-carrot-pie-cabbage-carrots-eggs-flour-milk-butter-spices-white-background_127032-2819.jpg');
-  background-size: cover;
-  min-height: 100vh;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input[type="text"],
-textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-}
-
-button {
-  padding: 10px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-/* Style for ingredients list */
-span {
-  display: inline-block;
-  margin-bottom: 5px;
-}
-
-button {
-  background-color: #d9534f;
-}
-
-button:hover {
-  background-color: #c9302c;
-}
-
+  
 
