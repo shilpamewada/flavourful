@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
@@ -5,18 +6,21 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-logout',
   templateUrl: './logout.component.html',
-  styleUrl: './logout.component.css'
+  styleUrls: ['./logout.component.css'] // Corrected styleUrls
 })
 export class LogoutComponent {
 
-  constructor(private service: UserService, private router: Router) {
+  constructor(private service: UserService, private router: Router) {}
+
+  ngOnInit() {
     console.log("Successfully Logged Out!!!");
 
-    //Clears the LocalStorage Data
+    // Clears the LocalStorage Data
     localStorage.removeItem('emailId');
     localStorage.clear();
 
     this.service.setUserLoggedOut();
-    this.router.navigate(['']);
+    this.router.navigate(['/login']);
   }
 }
+

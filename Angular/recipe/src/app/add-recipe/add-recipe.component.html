@@ -1,58 +1,121 @@
-<!-- 
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Form</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <style>
+    body {
+      background-image: url(https://img.freepik.com/premium-photo/mix-vegetables-food-isolated-grey-background_429553-176.jpg);
+      background-size: cover;
+      background-repeat: no-repeat; 
+      background-attachment: fixed;
+      background-position: center;
+    }
 
-      <div style="background-image: url('https://img.freepik.com/free-photo/ingredients-cabbage-carrot-pie-cabbage-carrots-eggs-flour-milk-butter-spices-white-background_127032-2819.jpg'); background-size: cover; min-height: 100vh;">
-        <div class="container" >
-          <label for="recipeName">Recipe Name:</label>
-          <input type="text" id="recipeName" [(ngModel)]="recipeName" /><br>
-        
-          <label for="ingredients">Ingredients:</label>
-          <div *ngFor="let ingredient of ingredients; let i = index">
-            <span>{{ ingredient }}</span>
-            <button (click)="removeIngredient(i)">Remove</button>
-          </div><br>
-          <input type="text" id="currentIngredient" [(ngModel)]="currentIngredient" />
-          <button (click)="addIngredient()">Add Ingredient</button><br>
-        
-          <label for="process">Process:</label>
-          <textarea id="process" [(ngModel)]="process"></textarea><br>
-          
-          <label for="image">Upload Image:</label>
-          <input type="file" id="image" (change)="imageUrl1($event)">
-          <div *ngIf="imageUrl">
-            <img [src]="imageUrl" alt="Recipe Image" style="max-width: 100px; max-height: 100px;">
-          </div><br>
-        
-          <button (click)="saveRecipe()">Save Recipe</button>
-        </div>
-      </div>
-       -->
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: lightblue;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 300px; /* Decrease the max-width */
+      width: 100%;
+      text-align: left;
+      margin-top: 50px; /* Add margin-top to create space */
+    }
 
+    label {
+      color: lightblue;
+      font-weight: bold;
+    }
 
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid lightblue;
+      border-radius: 0%;
+      color: lightblue;
+    }
 
-       <div style="background-image: url('https://img.freepik.com/free-photo/ingredients-cabbage-carrot-pie-cabbage-carrots-eggs-flour-milk-butter-spices-white-background_127032-2819.jpg'); background-size: cover; min-height: 100vh;">
-        <div class="container">
-          <label for="recipeName">Recipe Name:</label>
-          <input type="text" id="recipeName" [(ngModel)]="recipeName" /><br>
-        
-          <label for="ingredients">Ingredients:</label>
-          <div *ngFor="let ingredient of ingredients; let i = index">
-            <span>{{ ingredient }}</span>
-            <button (click)="removeIngredient(i)">Remove</button>
-          </div><br>
-          <input type="text" id="currentIngredient" [(ngModel)]="currentIngredient" />
-          <button (click)="addIngredient()">Add Ingredient</button><br>
-        
-          <label for="process">Process:</label>
-          <textarea id="process" [(ngModel)]="process"></textarea><br>
-          
-          <label for="image">Upload Image:</label>
-          <input type="file" id="image" (change)="imageUrl1($event)">
-          <div *ngIf="imageUrl">
-            <img [src]="imageUrl" alt="Recipe Image" style="max-width: 100px; max-height: 100px;">
-          </div><br>
-        
-          <button (click)="saveRecipe()">Save Recipe</button>
-        </div>
-      </div>
-      
+    input[type="file"] {
+      color: lightblue;
+    }
+
+    button {
+      background-color: lightblue;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 0px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .ingredient-list span {
+      color: lightblue;
+    }
+
+    .ingredient-list button {
+      background-color: #0056b3;
+      color: black;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 0px;
+      margin-left: 10px;
+    }
+
+    .ingredient-list button:hover {
+      background-color: lightblue;
+      color: black;
+    }
+
+    img {
+      border: 1px solid lightblue;
+      padding: 5px;
+      border-radius: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <label for="recipeName">Recipe Name:</label>
+    <input type="text" id="recipeName" [(ngModel)]="recipeName" /><br>
+
+    <label for="ingredients">Ingredients:</label>
+    <div class="ingredient-list" *ngFor="let ingredient of ingredients; let i = index">
+      <span>{{ ingredient }}</span>
+      <button (click)="removeIngredient(i)">Remove</button>
+    </div><br>
+    <input type="text" id="currentIngredient" [(ngModel)]="currentIngredient" />
+    <button (click)="addIngredient()">Add Ingredient</button><br>
+
+    <label for="process">Process:</label>
+    <textarea id="process" [(ngModel)]="process"></textarea><br>
+
+    <label for="image">Upload Image:</label>
+    <input type="file" id="image" (change)="imageUrl1($event)">
+    <div *ngIf="imageUrl">
+      <img [src]="imageUrl" alt="Recipe Image" style="max-width: 100px; max-height: 100px;">
+    </div><br>
+
+    <button (click)="saveRecipe()">Save Recipe</button>
+  </div>
+
+  <!-- Scripts for Angular -->
+  <script src="https://cdn.jsdelivr.net/npm/angular@1.8.2/angular.min.js"></script>
+</body>
+
+</html>

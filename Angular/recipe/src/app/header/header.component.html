@@ -1,105 +1,168 @@
-<!-- 
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Website Navbar</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <style>
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px 10px;
+    }
 
+    .navbar-brand {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 24px;
+      color: #fff;
+    }
 
+    .navbar-nav .nav-item {
+      margin-right: 15px; /* Adjust spacing between menu items */
+    }
 
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #b20dd3dd;" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="home">Home</a>
-        </li>
-       
-        <li class="nav-item">
-          <a class="nav-link" routerLink="about">AboutUs</a>
-        </li> 
-        <li class="nav-item">
-          <a class="nav-link" routerLink="login">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="register">Register</a>
-        </li>   
-        
-        <li class="nav-item">
-          <a class="nav-link" routerLink="ingrediants">Ingrediants</a>
-        </li> 
+    .navbar-nav .nav-link {
+      color: #fff;
+    }
 
-        <li class="nav-item">
-          <a class="nav-link" routerLink="addrecipe">Add-Recipe</a>
-        </li>
-      </ul>
-      <form class="d-flex">
+    .navbar-nav .nav-link:hover {
+      color: #ccc; /* Change color on hover */
+    }
+
+    .navbar-toggler {
+      border-color: #fff; /* Adjust toggler icon color */
+    }
+
+    .navbar-toggler-icon {
+      background-color: #fff; /* Adjust toggler icon color */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-utensils"></i> Food Website
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link" routerLink="logout">Logout</a>
+            <a class="nav-link" routerLink="home"><i class="fas fa-home"></i> Home</a>
           </li>
-        </ul>
-      </form>
-
-     
-    </div>
-  </div>
-</nav> -->
-
-
-
-
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #17151c;" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav me-auto">
-        <!-- <li class="nav-item">
-          <a class="nav-link active" routerLink="home" >Home
-            <span class="visually-hidden">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" routerLink="about" >AboutUs
-            <span class="visually-hidden">(current)</span>
-          </a>
-        </li> -->
-        <li class="nav-item">
-          <a class="nav-link" routerLink="home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="about">AboutUs</a>
-        </li> 
-        <li class="nav-item">
-          <!-- <a class="nav-link" routerLink="login">Login</a> -->
-          <a class="nav-link"  [class.disabled]="loginStatus" routerLink="login">Login</a>
-        </li>
-        <li class="nav-item">
-          <!-- <a class="nav-link" routerLink="register">Register</a> -->
-          <a class="nav-link" [class.disabled]="loginStatus" routerLink="register">Register</a>
-        </li>   
-<!--         
-        <li class="nav-item">
-          <a class="nav-link" routerLink="ingrediants">Ingrediants</a>
-        </li>  -->
-
-        <li class="nav-item">
-          <a class="nav-link" routerLink="addrecipe">Add-Recipe</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <ul class="navbar-nav me-auto">
-         
-          <!-- <button (click)="logout()" [disabled]="!isUserLoggedIn">Logout</button> -->
           <li class="nav-item">
-            <a class="nav-link" [class.disabled]="!loginStatus" routerLink="logout">Logout</a>
-                </li>
-        </ul>
-      </form>
-
-     
+            <a class="nav-link" routerLink="about"><i class="fas fa-info-circle"></i> About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="addrecipe"><i class="fas fa-plus"></i> Add Recipe</a>
+          </li>
+        </ul> 
+        <form class="d-flex">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" [class.disabled]="loginStatus" routerLink="login"><i class="fas fa-sign-in-alt"></i> Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [class.disabled]="loginStatus" routerLink="register"><i class="fas fa-user-plus"></i> Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [class.disabled]="!loginStatus" routerLink="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </li>
+          </ul>
+        </form>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-hxNv1r2mOa1n3el6hsP76aWjZxI3lc1lO9Afvwq6jH8xdBfq3g/Zz0nF0rHS7AEM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/angular@1.8.2/angular.min.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Website Navbar</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <style>
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px 10px;
+    }
+
+    .navbar-brand {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .navbar-nav .nav-item {
+      margin-right: 15px; /* Adjust spacing between menu items */
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ccc; /* Change color on hover */
+    }
+
+    .navbar-toggler {
+      border-color: #fff; /* Adjust toggler icon color */
+    }
+
+    .navbar-toggler-icon {
+      background-color: #fff; /* Adjust toggler icon color */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-utensils"></i> Food Website
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="home"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="about"><i class="fas fa-info-circle"></i> About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="addrecipe"><i class="fas fa-plus"></i> Add Recipe</a>
+          </li>
+        </ul> 
+        <form class="d-flex">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" [class.disabled]="loginStatus" routerLink="login"><i class="fas fa-sign-in-alt"></i> Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [class.disabled]="loginStatus" routerLink="register"><i class="fas fa-user-plus"></i> Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [class.disabled]="!loginStatus" (click)="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Scripts for Bootstrap and Angular -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-hxNv1r2mOa1n3el6hsP76aWjZxI3lc1lO9Afvwq6jH8xdBfq3g/Zz0nF0rHS7AEM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/angular@1.8.2/angular.min.js"></script>
+</body>
+</html>

@@ -1,3 +1,5 @@
+
+
 // import { Component } from '@angular/core';
 // import { UserService } from '../user.service';
 
@@ -8,50 +10,44 @@
 //   styleUrls: ['./header.component.css']
 // })
 // export class HeaderComponent {
-//   isUserLoggedIn: boolean;
+ 
+//   loginStatus: any;
+ 
+
+//   constructor(private service:UserService) {}
+
   
-
-//   constructor(private userservice:UserService) {
-//     // Initialize isLoggedIn to false
-//     this.isUserLoggedIn = false;
-
-//     // Subscribe to user login status changes
-//     this.userservice.loginStatus.subscribe((loginStatus: boolean) => { // Specify the type of status
-//       this.isUserLoggedIn = loginStatus;
+//   ngOnInit() {
+//     this.service.getUserLoginStatus().subscribe((data: any) => {
+//       this.loginStatus = data;
 //     });
-//   }
 
-//   logout() {
-//     // Call the logout function from UserService
-//     this.userservice.logout();
+ 
 //   }
+  
 // }
 
-
-
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
- 
+export class HeaderComponent implements OnInit {
   loginStatus: any;
- 
 
-  constructor(private service:UserService) {}
+  constructor(private service: UserService, private router: Router) {}
 
-  
   ngOnInit() {
-    this.service.getUserLoginStatus().subscribe((data: any) => {
+    this.service.getUserLoginStatus().subscribe((data: boolean) => {
       this.loginStatus = data;
     });
-
- 
   }
-  
+
+  logout() {
+    this.router.navigate(['/logout']); // Navigates to the logout component
+  }
 }
